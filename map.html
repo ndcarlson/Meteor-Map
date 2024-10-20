@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meteorite Landings - Map</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- New Header with Navigation Buttons -->
+    <header class="site-header">
+        <h1 class="site-title">Meteor Map</h1>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="map.html" class="nav-button">Map</a>
+            <a href="database.html" class="nav-button">Database</a>
+            <a href="about.html" class="nav-button">About Us</a>
+        </nav>
+    </header>
+
+    <!-- Map Controls -->
+    <div id="map-controls">
+        <button onclick="resetMap()">Reset Map</button>
+        <label><input type="checkbox" id="stony" checked> Stony</label>
+        <label><input type="checkbox" id="iron" checked> Iron</label>
+        <label><input type="checkbox" id="stony-iron" checked> Stony-Iron</label>
+        <label><input type="checkbox" id="chondrite" checked> Chondrite</label>
+        <label><input type="checkbox" id="achondrite" checked> Achondrite</label>
+        <label><input type="checkbox" id="others" checked> Others</label>
+        <button id="apply-filters">Apply Filters</button>
+    </div>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <!-- Legend Container -->
+    <div id="legend"><h3>Legend</h3></div>
+
+    <!-- Load the Google Maps API script -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_iVBs1p2g7o96dDkl2IjkzHC7TgVHTIY&callback=initMap">
+    </script>
+</body>
+</html>
